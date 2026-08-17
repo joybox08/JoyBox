@@ -1,0 +1,305 @@
+:root {
+  --nav-height: 78px;
+}
+
+body {
+  padding-top: 0;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: min(100%, 1280px);
+  margin: 1rem auto 0;
+  padding: 0 1.25rem;
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: var(--nav-height);
+  padding: 0 1.35rem;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 999px;
+  background: rgba(252, 247, 240, 0.64);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 16px 40px rgba(31, 27, 24, 0.06);
+  transition: background var(--transition), box-shadow var(--transition), border-color var(--transition), transform var(--transition);
+}
+
+.navbar.is-scrolled .navbar__inner {
+  background: rgba(252, 247, 240, 0.9);
+  border-color: rgba(31, 27, 24, 0.12);
+  box-shadow: 0 18px 42px rgba(31, 27, 24, 0.1);
+}
+
+.navbar__brand {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.navbar__brand-strong {
+  font-weight: 800;
+}
+
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 1.15rem;
+}
+
+.nav-link,
+.navbar__icon-link {
+  position: relative;
+  font-size: 0.96rem;
+  color: var(--muted);
+  padding: 0.3rem 0;
+  transition: color var(--transition);
+}
+
+.nav-link:hover,
+.nav-link:focus-visible,
+.navbar__icon-link:hover,
+.navbar__icon-link:focus-visible {
+  color: var(--text);
+}
+
+.nav-link::after,
+.navbar__icon-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.2rem;
+  width: 100%;
+  height: 1.5px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition);
+}
+
+.nav-link:hover::after,
+.nav-link:focus-visible::after,
+.nav-link.active::after,
+.navbar__icon-link:hover::after,
+.navbar__icon-link:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.nav-link.active {
+  color: var(--text);
+}
+
+.navbar__dropdown {
+  position: relative;
+}
+
+/* Invisible hover bridge between trigger and dropdown panel.
+   Prevents the dropdown from closing when the pointer crosses the gap. */
+.navbar__dropdown::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 0.7rem;
+  pointer-events: auto;
+}
+
+.navbar__dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: none;
+  border: 0;
+  padding: 0;
+  color: inherit;
+  cursor: pointer;
+}
+
+.navbar__dropdown-toggle .caret {
+  font-size: 0.8rem;
+  transition: transform var(--transition);
+}
+
+.navbar__dropdown.is-open .caret {
+  transform: rotate(180deg);
+}
+
+.navbar__dropdown-panel {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  padding: 0.6rem;
+  border: 1px solid rgba(31, 27, 24, 0.08);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 250, 244, 0.96);
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 0.2rem;
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+  transition: opacity var(--transition), transform var(--transition);
+  z-index: 1;
+}
+
+.navbar__dropdown.is-open .navbar__dropdown-panel {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.navbar__dropdown-panel a {
+  padding: 0.7rem 0.8rem;
+  border-radius: 10px;
+  color: var(--muted);
+  transition: background var(--transition), color var(--transition);
+}
+
+.navbar__dropdown-panel a:hover,
+.navbar__dropdown-panel a:focus-visible {
+  background: rgba(168, 134, 88, 0.1);
+  color: var(--text);
+}
+
+.navbar__mobile-toggle,
+.navbar__mobile-close {
+  display: none;
+  border: 0;
+  background: none;
+  padding: 0.25rem;
+  cursor: pointer;
+}
+
+.navbar__mobile-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--text);
+  margin: 5px 0;
+  border-radius: 999px;
+}
+
+.navbar__mobile-menu {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .navbar__links {
+    display: none;
+  }
+
+  .navbar__mobile-toggle {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar__mobile-menu {
+    display: block;
+    position: fixed;
+    inset: 0 0 0 auto;
+    width: min(88vw, 320px);
+    padding: 1.2rem;
+    background: rgba(252, 247, 240, 0.97);
+    box-shadow: -16px 0 48px rgba(31, 27, 24, 0.12);
+    transform: translateX(102%);
+    transition: transform 280ms ease;
+    z-index: 1100;
+  }
+
+  .navbar__mobile-menu.is-open {
+    transform: translateX(0);
+  }
+
+  .navbar__mobile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.4rem;
+  }
+
+  .navbar__mobile-nav {
+    display: grid;
+    gap: 0.35rem;
+  }
+
+  .navbar__mobile-nav a,
+  .navbar__mobile-nav button {
+    width: 100%;
+    text-align: left;
+    padding: 0.8rem 0.45rem;
+    color: var(--text);
+    border-radius: 10px;
+    transition: background var(--transition), color var(--transition);
+  }
+
+  .navbar__mobile-nav a:hover,
+  .navbar__mobile-nav a:focus-visible,
+  .navbar__mobile-nav button:hover,
+  .navbar__mobile-nav button:focus-visible {
+    background: rgba(168, 134, 88, 0.12);
+    color: var(--accent-strong);
+  }
+
+  .navbar__mobile-submenu {
+    display: grid;
+    gap: 0.2rem;
+    padding: 0.3rem 0 0.1rem 1rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 240ms ease;
+  }
+
+  .navbar__mobile-submenu.is-open {
+    max-height: 220px;
+  }
+
+  .navbar__mobile-submenu a {
+    padding: 0.55rem 0.4rem;
+    color: var(--muted);
+  }
+
+  .navbar__mobile-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(31, 27, 24, 0.25);
+    backdrop-filter: blur(2px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 220ms ease;
+    z-index: 1050;
+  }
+
+  .navbar__mobile-backdrop.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0 0.85rem;
+    margin-top: 0.65rem;
+  }
+
+  .navbar__inner {
+    min-height: 64px;
+    padding: 0 0.95rem;
+  }
+
+  .navbar__brand {
+    font-size: 1.05rem;
+    letter-spacing: 0.2em;
+  }
+}

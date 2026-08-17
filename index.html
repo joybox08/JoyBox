@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JoyBox | Home</title>
+  <meta name="description"
+    content="JoyBox presents a refined gifting and accessories experience — thoughtfully curated pieces designed to make everyday moments feel personal, beautiful, and joyful." />
+  <meta property="og:title" content="JoyBox | Editorial Gifting & Accessories" />
+  <meta property="og:description" content="Thoughtfully curated gifts and accessories for everyday moments." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://joybox.example/" />
+  <meta property="og:image" content="assets/images/home/hero.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/new-arrivals.css" />
+  <link rel="stylesheet" href="css/testimonials.css" />
+</head>
+
+<body>
+  <header id="navbar-container"></header>
+
+  <main class="home-page">
+    <section class="new-arrivals page-shell reveal-home" aria-roledescription="carousel"
+      aria-label="New Arrivals promotional banner">
+      <div class="new-arrivals__background" aria-hidden="true">
+        <span class="new-arrivals__orb new-arrivals__orb--one"></span>
+        <span class="new-arrivals__orb new-arrivals__orb--two"></span>
+        <span class="new-arrivals__orb new-arrivals__orb--three"></span>
+        <span class="new-arrivals__grid"></span>
+      </div>
+
+      <div class="new-arrivals__slider" data-new-arrivals-slider>
+        <div class="new-arrivals__track" data-new-arrivals-track aria-live="polite">
+          <article class="new-arrival-slide is-active" data-new-arrivals-slide data-theme="warm"
+            aria-roledescription="slide" aria-label="Slide 1 of 5: New Arrivals">
+            <div class="new-arrival-slide__inner">
+              <div class="new-arrival-content">
+                <span class="new-arrival-content__eyebrow">JoyBox · Just Dropped</span>
+                <h2 class="new-arrival-content__headline">New Arrivals</h2>
+                <p class="new-arrival-content__copy">Something beautiful just arrived — explore a fresh drop of pieces
+                  designed for everyday elegance.</p>
+                <a class="new-arrival-content__cta" href="hampers.html" data-slide-link>
+                  <span>Explore New Arrivals</span>
+                  <span class="new-arrival-content__cta-arrow" aria-hidden="true">→</span>
+                </a>
+                <div class="new-arrival-content__meta">
+                  <span>5 fresh pieces</span>
+                  <span class="new-arrival-content__dot" aria-hidden="true"></span>
+                  <span>Limited drop</span>
+                </div>
+              </div>
+
+              <div class="new-arrival-product">
+                <div class="new-arrival-product__halo" aria-hidden="true"></div>
+                <div class="new-arrival-product__card">
+                  <img src="assets/images/home/hero.jpg" alt="JoyBox accessories styled in a warm editorial setting"
+                    loading="lazy" />
+                  <span class="new-arrival-product__tag">New Season</span>
+                </div>
+                <span class="new-arrival-product__chip new-arrival-product__chip--top" aria-hidden="true">✦
+                  Hand-curated</span>
+                <span class="new-arrival-product__chip new-arrival-product__chip--bottom" aria-hidden="true">♡ Joy in
+                  motion</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="new-arrival-slide" data-new-arrivals-slide data-theme="rose" aria-roledescription="slide"
+            aria-label="Slide 2 of 5: Gift Collection" aria-hidden="true">
+            <div class="new-arrival-slide__inner">
+              <div class="new-arrival-content">
+                <span class="new-arrival-content__eyebrow">Gift Collection</span>
+                <h2 class="new-arrival-content__headline">Made to Make Someone Smile</h2>
+                <p class="new-arrival-content__copy">Thoughtful gifts for every special moment — wrapped in softness,
+                  finished with care.</p>
+                <a class="new-arrival-content__cta" href="hampers.html" data-slide-link>
+                  <span>Shop Gift Collection</span>
+                  <span class="new-arrival-content__cta-arrow" aria-hidden="true">→</span>
+                </a>
+                <div class="new-arrival-content__meta">
+                  <span>Hampers ready to gift</span>
+                  <span class="new-arrival-content__dot" aria-hidden="true"></span>
+                  <span>From ₹79</span>
+                </div>
+              </div>
+
+              <div class="new-arrival-product">
+                <div class="new-arrival-product__halo" aria-hidden="true"></div>
+                <div class="new-arrival-product__card">
+                  <img src="assets/images/home/collection-hampers.jpg" alt="JoyBox hampers styled for gifting"
+                    loading="lazy" />
+                  <span class="new-arrival-product__tag">Editor's Pick</span>
+                </div>
+                <span class="new-arrival-product__chip new-arrival-product__chip--top" aria-hidden="true">✿ Soft
+                  layers</span>
+                <span class="new-arrival-product__chip new-arrival-product__chip--bottom" aria-hidden="true">✦ Ready to
+                  wrap</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="new-arrival-slide" data-new-arrivals-slide data-theme="pearl" aria-roledescription="slide"
+            aria-label="Slide 3 of 5: Bracelet Collection" aria-hidden="true">
+            <div class="new-arrival-slide__inner">
+              <div class="new-arrival-content">
+                <span class="new-arrival-content__eyebrow">Bracelet Edit</span>
+                <h2 class="new-arrival-content__headline">Little Details. Big Charm.</h2>
+                <p class="new-arrival-content__copy">Discover our latest bracelet collection — sculpted, polished, and
+                  made to layer.</p>
+                <a class="new-arrival-content__cta" href="bracelets.html" data-slide-link>
+                  <span>Explore Bracelets</span>
+                  <span class="new-arrival-content__cta-arrow" aria-hidden="true">→</span>
+                </a>
+                <div class="new-arrival-content__meta">
+                  <span>5 new silhouettes</span>
+                  <span class="new-arrival-content__dot" aria-hidden="true"></span>
+                  <span>From ₹49</span>
+                </div>
+              </div>
+
+              <div class="new-arrival-product">
+                <div class="new-arrival-product__halo" aria-hidden="true"></div>
+                <div class="new-arrival-product__card">
+                  <img src="assets/images/products/bracelets/hamper-03-04.jpg" alt="JoyBox sculpted pearl bracelet"
+                    loading="lazy" />
+                  <span class="new-arrival-product__tag">New In</span>
+                </div>
+                <span class="new-arrival-product__chip new-arrival-product__chip--top" aria-hidden="true">◌ Sculpted
+                  pearl</span>
+                <span class="new-arrival-product__chip new-arrival-product__chip--bottom" aria-hidden="true">♡
+                  Layer-ready</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="new-arrival-slide" data-new-arrivals-slide data-theme="dusk" aria-roledescription="slide"
+            aria-label="Slide 4 of 5: Pendants" aria-hidden="true">
+            <div class="new-arrival-slide__inner">
+              <div class="new-arrival-content">
+                <span class="new-arrival-content__eyebrow">Pendant Drop</span>
+                <h2 class="new-arrival-content__headline">Wear Your Story</h2>
+                <p class="new-arrival-content__copy">Elegant pieces designed to make every moment feel personal and
+                  quietly luminous.</p>
+                <a class="new-arrival-content__cta" href="earring.html" data-slide-link>
+                  <span>Discover Pendants</span>
+                  <span class="new-arrival-content__cta-arrow" aria-hidden="true">→</span>
+                </a>
+                <div class="new-arrival-content__meta">
+                  <span>6 new designs</span>
+                  <span class="new-arrival-content__dot" aria-hidden="true"></span>
+                  <span>From ₹49</span>
+                </div>
+              </div>
+
+              <div class="new-arrival-product">
+                <div class="new-arrival-product__halo" aria-hidden="true"></div>
+                <div class="new-arrival-product__card">
+                  <img src="assets/images/products/hampers/hamper-07-3.jpg" alt="JoyBox aura drop pendant"
+                    loading="lazy" />
+                  <span class="new-arrival-product__tag">Soft Glow</span>
+                </div>
+                <span class="new-arrival-product__chip new-arrival-product__chip--top" aria-hidden="true">✦ Aura
+                  drop</span>
+                <span class="new-arrival-product__chip new-arrival-product__chip--bottom" aria-hidden="true">♡ Everyday
+                  shine</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="new-arrival-slide" data-new-arrivals-slide data-theme="ember" aria-roledescription="slide"
+            aria-label="Slide 5 of 5: Featured Collection" aria-hidden="true">
+            <div class="new-arrival-slide__inner">
+              <div class="new-arrival-content">
+                <span class="new-arrival-content__eyebrow">JoyBox · Featured</span>
+                <h2 class="new-arrival-content__headline">Your Next Favourite Piece</h2>
+                <p class="new-arrival-content__copy">Discover something special from JoyBox — slow design, considered
+                  materials, refined moments.</p>
+                <a class="new-arrival-content__cta" href="hampers.html" data-slide-link>
+                  <span>Explore Collection</span>
+                  <span class="new-arrival-content__cta-arrow" aria-hidden="true">→</span>
+                </a>
+                <div class="new-arrival-content__meta">
+                  <span>Curated by JoyBox</span>
+                  <span class="new-arrival-content__dot" aria-hidden="true"></span>
+                  <span>Hand-finished</span>
+                </div>
+              </div>
+
+              <div class="new-arrival-product">
+                <div class="new-arrival-product__halo" aria-hidden="true"></div>
+                <div class="new-arrival-product__card">
+                  <img src="assets/images/products/hampers/hamper-08-1.jpg" alt="JoyBox story imagery in a calm editorial setting"
+                    loading="lazy" />
+                  <span class="new-arrival-product__tag">Featured</span>
+                </div>
+                <span class="new-arrival-product__chip new-arrival-product__chip--top" aria-hidden="true">✦ Made to
+                  give</span>
+                <span class="new-arrival-product__chip new-arrival-product__chip--bottom" aria-hidden="true">♡ Made to
+                  remember</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="new-arrival-controls" data-new-arrivals-controls>
+          <button class="new-arrival-control new-arrival-control--prev" type="button" data-new-arrivals-prev
+            aria-label="Previous slide">
+            <span aria-hidden="true">‹</span>
+          </button>
+          <button class="new-arrival-control new-arrival-control--next" type="button" data-new-arrivals-next
+            aria-label="Next slide">
+            <span aria-hidden="true">›</span>
+          </button>
+        </div>
+
+        <div class="new-arrival-dots" role="tablist" aria-label="Choose slide" data-new-arrivals-dots></div>
+
+        <div class="new-arrival-progress" aria-hidden="true">
+          <span class="new-arrival-progress__bar" data-new-arrivals-progress></span>
+        </div>
+      </div>
+    </section>
+    <section class="hero page-shell reveal-home">
+      <div class="hero__content">
+        <div class="hero__eyebrow">Editorial gifting • modern rituals</div>
+        <h1 class="hero__headline">
+          <span class="line">Little Things.</span>
+          <span class="line">Big Joy.</span>
+        </h1>
+        <p class="hero__copy">
+          Thoughtfully curated gifts and accessories made to add a little more joy to every moment.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--accent" href="hampers.html">Explore Collection</a>
+          <a class="button" href="https://www.instagram.com/joybox.08/" target="_blank" rel="noreferrer noopener">DM on
+            Instagram</a>
+        </div>
+        <div class="hero__meta">
+          <span>Gift-ready styling</span>
+          <span>Soft editorial energy</span>
+        </div>
+      </div>
+
+      <div class="hero__visual">
+        <div class="hero__image-card">
+          <span class="hero__badge">New season energy</span>
+          <span class="hero__stamp">Joy in motion</span>
+          <div class="hero__shape"></div>
+          <img src="assets/images/home/hero.jpg" alt="JoyBox accessories styled in a warm editorial setting" />
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="section page-shell reveal-home">
+      <div class="section__heading">
+        <div>
+          <div class="section__eyebrow">Collection preview</div>
+          <h2>Explore the Collection</h2>
+        </div>
+        <p class="section__intro">A thoughtful palette of pieces designed to feel personal, refined, and easy to gift.
+        </p>
+      </div>
+
+      <div class="collection-grid">
+        <article class="collection-card collection-card--tall reveal-home">
+          <img src="assets/images/products/hampers/hamper-08-1.jpg" alt="JoyBox hampers styled for gifting" loading="lazy" />
+          <div class="collection-card__content">
+            <h3>Hampers</h3>
+            <p>Curated bundles wrapped in soft, considered details.</p>
+            <a class="collection-card__link" href="hampers.html">Explore <span>↗</span></a>
+          </div>
+        </article>
+
+        <div class="collection-card--stack">
+          <article class="collection-card reveal-home">
+            <img src="assets/images/home/collection-gothic.jpg" alt="JoyBox gothic-inspired accessories"
+              loading="lazy" />
+            <div class="collection-card__content">
+              <h3>Gothic</h3>
+              <p>Dark, layered, and quietly dramatic.</p>
+              <a class="collection-card__link" href="gothic.html">Explore <span>↗</span></a>
+            </div>
+          </article>
+
+          <div class="collection-grid" style="grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 0.2rem;">
+            <article class="collection-card reveal-home">
+              <img src="assets/images/home/collection-bracelets.jpg" alt="JoyBox bracelets with sculptural detail"
+                loading="lazy" />
+              <div class="collection-card__content">
+                <h3>Bracelets</h3>
+                <a class="collection-card__link" href="bracelets.html">Explore <span>↗</span></a>
+              </div>
+            </article>
+
+            <article class="collection-card reveal-home">
+              <img src="assets/images/home/collection-pendants.jpg" alt="JoyBox pendants with a minimal finish"
+                loading="lazy" />
+              <div class="collection-card__content">
+                <h3>Pendants</h3>
+                <a class="collection-card__link" href="pendants.html">Explore <span>↗</span></a>
+              </div>
+            </article>
+          </div>
+
+          <div class="collection-grid" style="grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 0.2rem;">
+            <article class="collection-card reveal-home">
+              <img src="assets/images/home/collection-earrings.jpg" alt="JoyBox earrings with soft sculptural detail"
+                loading="lazy" />
+              <div class="collection-card__content">
+                <h3>Earring</h3>
+                <!-- <p>Soft, sculptural, and made to catch the light.</p> -->
+                <a class="collection-card__link" href="earring.html">Explore <span>↗</span></a>
+              </div>
+            </article>
+
+            <!-- <article class="collection-card reveal-home">
+              <img src="assets/images/home/collection-bracelets.jpg" alt="JoyBox keychains with a tactile, refined finish"
+                loading="lazy" />
+              <div class="collection-card__content">
+                <h3>Keychain</h3>
+                <p>Little keepsakes made to carry joy with you.</p>
+                <a class="collection-card__link" href="keychain.html">Explore <span>↗</span></a>
+              </div>
+            </article> --->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section page-shell story reveal-home">
+      <div class="story__media">
+        <img src="assets/images/home/story.jpg" alt="JoyBox story imagery in a calm editorial setting" loading="lazy" />
+        <div class="story__overlay"></div>
+      </div>
+      <div class="story__content">
+        <div class="section__eyebrow">Brand story</div>
+        <h2>Made to Give. Made to Remember.</h2>
+        <p>
+          JoyBox creates thoughtful pieces designed to feel personal, beautiful, and easy to hold onto. Every detail is
+          shaped with a sense of tenderness and modern elegance.
+        </p>
+        <a class="story__link" href="about.html">Discover Our Story <span>↗</span></a>
+      </div>
+    </section>
+
+    <section class="section section--tight page-shell reveal-home">
+      <div class="features">
+        <article class="feature-card reveal-home">
+          <div class="feature-card__icon">✦</div>
+          <h3>Thoughtfully Curated</h3>
+          <p>Products selected with care and a gentle editorial eye.</p>
+        </article>
+        <article class="feature-card reveal-home">
+          <div class="feature-card__icon">♡</div>
+          <h3>Made for Gifting</h3>
+          <p>Little things that make everyday moments feel special.</p>
+        </article>
+        <article class="feature-card reveal-home">
+          <div class="feature-card__icon">◌</div>
+          <h3>Unique Styles</h3>
+          <p>Pieces shaped for different moods, personalities, and rituals.</p>
+        </article>
+        <article class="feature-card reveal-home">
+          <div class="feature-card__icon">✿</div>
+          <h3>Personal Touch</h3>
+          <p>A simple way to give someone something they will remember.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section page-shell reveal-home">
+      <div class="cta">
+        <div class="cta__content">
+          <div class="section__eyebrow">Instagram</div>
+          <h2>See More JoyBox</h2>
+          <p>Discover new pieces, gifting ideas, and JoyBox moments on Instagram.</p>
+        </div>
+        <div class="cta__action">
+          <a class="btn" href="https://www.instagram.com/joybox.08/" target="_blank" rel="noreferrer noopener">Follow
+            @joybox.08</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="testimonials page-shell reveal-home" aria-label="Customer testimonials">
+    <div class="testimonials__background" aria-hidden="true">
+      <span class="testimonials__shape testimonials__shape--one"></span>
+      <span class="testimonials__shape testimonials__shape--two"></span>
+      <span class="testimonials__shape testimonials__shape--three"></span>
+    </div>
+
+    <div class="testimonials__head">
+      <p class="eyebrow">Loved by our community</p>
+      <h2>Words from the people who carry JoyBox</h2>
+      <p class="testimonials__intro">A small collection of kind notes from customers who made JoyBox part of their everyday moments.</p>
+    </div>
+
+    <div class="testimonials__viewport" data-testimonials-viewport>
+      <div class="testimonials__track" data-testimonials-track>
+        <article class="testimonial-card is-active" data-testimonial>
+          <span class="testimonial-card__quote" aria-hidden="true">“</span>
+          <p class="testimonial-card__text">The hamper looked even more beautiful in person. Perfectly packed and delivered with so much care.</p>
+          <div class="testimonial-card__author">
+            <span class="testimonial-card__avatar" aria-hidden="true">A</span>
+            <div>
+              <span class="testimonial-card__name">Ananya</span>
+              <span class="testimonial-card__role">Hampers customer</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card" data-testimonial>
+          <span class="testimonial-card__quote" aria-hidden="true">“</span>
+          <p class="testimonial-card__text">I ordered a pendant as a gift and absolutely loved the finishing. It felt very premium.</p>
+          <div class="testimonial-card__author">
+            <span class="testimonial-card__avatar" aria-hidden="true">R</span>
+            <div>
+              <span class="testimonial-card__name">Riya</span>
+              <span class="testimonial-card__role">Pendant customer</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card" data-testimonial>
+          <span class="testimonial-card__quote" aria-hidden="true">“</span>
+          <p class="testimonial-card__text">Beautiful products and such a lovely presentation. Definitely ordering again!</p>
+          <div class="testimonial-card__author">
+            <span class="testimonial-card__avatar" aria-hidden="true">K</span>
+            <div>
+              <span class="testimonial-card__name">Kavya</span>
+              <span class="testimonial-card__role">Bracelet customer</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card" data-testimonial>
+          <span class="testimonial-card__quote" aria-hidden="true">“</span>
+          <p class="testimonial-card__text">The gothic pieces have so much personality. They feel bold without being too much — exactly my style.</p>
+          <div class="testimonial-card__author">
+            <span class="testimonial-card__avatar" aria-hidden="true">M</span>
+            <div>
+              <span class="testimonial-card__name">Meera</span>
+              <span class="testimonial-card__role">Gothic customer</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card" data-testimonial>
+          <span class="testimonial-card__quote" aria-hidden="true">“</span>
+          <p class="testimonial-card__text">I gifted a hamper to my sister and she was so happy with every little detail. It felt personal from start to finish.</p>
+          <div class="testimonial-card__author">
+            <span class="testimonial-card__avatar" aria-hidden="true">S</span>
+            <div>
+              <span class="testimonial-card__name">Sneha</span>
+              <span class="testimonial-card__role">Hamper customer</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card" data-testimonial>
+          <span class="testimonial-card__quote" aria-hidden="true">“</span>
+          <p class="testimonial-card__text">You can tell real care went into every piece. The packaging, the finish, the little notes — it all feels so thoughtful.</p>
+          <div class="testimonial-card__author">
+            <span class="testimonial-card__avatar" aria-hidden="true">P</span>
+            <div>
+              <span class="testimonial-card__name">Priya</span>
+              <span class="testimonial-card__role">Repeat customer</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="testimonials__controls">
+      <button class="testimonial-control testimonial-control--prev" type="button" data-testimonials-prev aria-label="Previous testimonial">
+        <span aria-hidden="true">‹</span>
+      </button>
+
+      <div class="testimonial-dots" role="tablist" aria-label="Choose testimonial" data-testimonials-dots></div>
+
+      <button class="testimonial-control testimonial-control--next" type="button" data-testimonials-next aria-label="Next testimonial">
+        <span aria-hidden="true">›</span>
+      </button>
+    </div>
+  </section>
+
+  <footer class="footer page-shell">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand">JOYBOX</div>
+        <p>Thoughtfully curated gifts and accessories made to bring a little more joy to everyday life.</p>
+      </div>
+      <div>
+        <div class="footer__brand">Explore</div>
+        <div class="footer__links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__brand">Collection</div>
+        <div class="footer__links">
+          <a href="hampers.html">Hampers</a>
+          <a href="gothic.html">Gothic</a>
+          <a href="bracelets.html">Bracelets</a>
+          <a href="pendants.html">Pendants</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__brand">Social</div>
+        <div class="footer__links">
+          <a href="https://www.instagram.com/joybox.08/" target="_blank" rel="noreferrer noopener">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">© <span data-year></span> JoyBox. All rights reserved.</div>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+  <script src="js/navbar.js"></script>
+  <script src="js/home.js"></script>
+  <script src="js/new-arrivals.js"></script>
+  <script src="js/testimonials.js"></script>
+</body>
+
+</html>
