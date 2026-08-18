@@ -278,6 +278,10 @@
     transform: none;
     transition: none;
   }
+
+  .product-card__media {
+    min-height: 200px;
+  }
 }
 
 @keyframes floatShape {
