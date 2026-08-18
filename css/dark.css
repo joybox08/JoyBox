@@ -1,0 +1,835 @@
+/* =========================================
+   JOYBOX — DARK THEME FOUNDATION
+   Phase 1
+========================================= */
+
+/* Dark theme color system */
+:root {
+  --bg: #0b0b0d;
+  --bg-soft: #15151a;
+
+  --surface: rgba(25, 25, 30, 0.78);
+  --surface-light: rgba(35, 35, 42, 0.72);
+
+  --text: #f5f2ed;
+  --muted: #aaa6a0;
+
+  --accent: #a88658;
+  --accent-strong: #d0aa73;
+
+  --border: rgba(255, 255, 255, 0.10);
+
+  --shadow:
+    0 20px 50px rgba(0, 0, 0, 0.45);
+
+  --radius: 22px;
+  --radius-sm: 14px;
+
+  --container: min(1120px, calc(100% - 2rem));
+
+  --transition: 220ms ease;
+
+  --font-display: "Inter", "Segoe UI", sans-serif;
+  --font-body: "Inter", "Segoe UI", sans-serif;
+}
+
+
+/* =========================================
+   GLOBAL DARK BACKGROUND
+========================================= */
+
+html {
+  background: var(--bg);
+}
+
+body {
+  color: var(--text);
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(168, 134, 88, 0.08),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(168, 134, 88, 0.05),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      var(--bg) 0%,
+      var(--bg-soft) 100%
+    );
+}
+
+
+/* =========================================
+   TEXT COLORS
+========================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text);
+}
+
+p {
+  color: var(--muted);
+}
+
+a {
+  color: inherit;
+}
+
+
+/* =========================================
+   BASIC GLASS SURFACE
+   Will be used more in Phase 2
+========================================= */
+
+.dark-surface {
+  background: var(--surface);
+  border: 1px solid var(--border);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  box-shadow: var(--shadow);
+}
+
+
+/* =========================================
+   SCROLLBAR — DARK THEME
+========================================= */
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(168, 134, 88, 0.45);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+
+/* =========================================
+   TEXT SELECTION
+========================================= */
+
+::selection {
+  background: var(--accent);
+  color: #ffffff;
+}
+/* =========================================
+   PHASE 2 — COMPONENT DARK THEME
+========================================= */
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar__inner {
+  background: rgba(18, 18, 22, 0.78);
+  border: 1px solid var(--border);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  color: var(--text);
+}
+
+.navbar.is-scrolled .navbar__inner {
+  background: rgba(12, 12, 15, 0.95);
+  border-color: rgba(255, 255, 255, 0.13);
+}
+
+.navbar__brand {
+  color: var(--text);
+}
+
+.navbar a {
+  color: var(--text);
+}
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.collection-hero__title {
+  color: var(--text);
+}
+
+.collection-hero__copy {
+  color: var(--muted);
+}
+
+.collection-hero__nav {
+  color: var(--accent-strong);
+}
+
+.collection-hero__visual {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(168, 134, 88, 0.16),
+      rgba(22, 22, 28, 0.92)
+    );
+
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.collection-hero__visual::before,
+.collection-hero__visual::after {
+  background:
+    radial-gradient(
+      circle,
+      rgba(168, 134, 88, 0.22),
+      rgba(168, 134, 88, 0.02)
+    );
+}
+
+.collection-hero__badge {
+  background: rgba(18, 18, 22, 0.82);
+  border: 1px solid rgba(168, 134, 88, 0.28);
+
+  color: var(--accent-strong);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================
+   COLLECTION CATALOG
+========================================= */
+
+.collection-catalog__head h2 {
+  color: var(--text);
+}
+
+.collection-catalog__summary {
+  color: var(--muted);
+}
+
+
+/* =========================================
+   PRODUCT CARDS
+========================================= */
+
+.product-card {
+  background: rgba(25, 25, 30, 0.72);
+
+  border: 1px solid var(--border);
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  box-shadow:
+    0 14px 34px rgba(0, 0, 0, 0.35),
+    inset 0 1px 1px rgba(255, 255, 255, 0.04);
+
+  transition:
+    transform 420ms ease,
+    box-shadow 420ms ease,
+    border-color 420ms ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(208, 170, 115, 0.35);
+
+  box-shadow:
+    0 22px 48px rgba(0, 0, 0, 0.5),
+    0 0 25px rgba(168, 134, 88, 0.10);
+}
+
+
+/* PRODUCT IMAGE */
+
+.product-card__media {
+  background: #1b1a1f;
+}
+
+.product-card__overlay {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.08) 0%,
+      rgba(0, 0, 0, 0.40) 100%
+    );
+}
+
+
+/* PRODUCT TEXT */
+
+.product-card__name {
+  color: var(--text);
+}
+
+.product-card__price {
+  color: var(--accent-strong);
+}
+
+.product-card__description {
+  color: var(--muted);
+}
+
+
+/* =========================================
+   COLOR PILLS
+========================================= */
+
+.color-pill {
+  background: rgba(168, 134, 88, 0.12);
+
+  color: var(--accent-strong);
+
+  border: 1px solid rgba(208, 170, 115, 0.22);
+
+  transition:
+    background var(--transition),
+    border-color var(--transition);
+}
+
+.color-pill:hover {
+  background: rgba(168, 134, 88, 0.22);
+  border-color: rgba(208, 170, 115, 0.42);
+}
+
+
+/* =========================================
+   PRODUCT ACTIONS
+========================================= */
+
+.product-card__link {
+  color: var(--accent-strong);
+}
+
+.product-card__insta {
+  color: var(--text);
+}
+
+.product-card__link:hover,
+.product-card__insta:hover {
+  color: var(--accent);
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.btn,
+.button {
+  background: rgba(30, 30, 36, 0.78);
+  color: var(--text);
+
+  border: 1px solid var(--border);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.btn:hover,
+.button:hover {
+  background: rgba(40, 40, 48, 0.88);
+  border-color: var(--accent);
+}
+
+
+/* =========================================
+   EMPTY PRODUCT STATE
+========================================= */
+
+.collection-empty {
+  background: rgba(25, 25, 30, 0.55);
+
+  border: 1px dashed rgba(255, 255, 255, 0.15);
+
+  color: var(--muted);
+}
+
+
+/* =========================================
+   CUSTOM HAMPER SECTION
+========================================= */
+
+.custom-hamper__inner {
+  background: rgba(25, 25, 30, 0.72);
+
+  border: 1px solid var(--border);
+
+  box-shadow: var(--shadow);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.custom-hamper__inner::before {
+  background:
+    radial-gradient(
+      circle at 30% 30%,
+      rgba(168, 134, 88, 0.20),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 75% 70%,
+      rgba(208, 170, 115, 0.12),
+      transparent 60%
+    );
+}
+
+.custom-hamper__title {
+  color: var(--text);
+}
+
+.custom-hamper__copy {
+  color: var(--muted);
+}
+
+.custom-hamper__shape {
+  background: rgba(168, 134, 88, 0.12);
+}
+
+.custom-hamper__shape--c {
+  background: rgba(208, 170, 115, 0.08);
+}
+
+
+/* CUSTOM HAMPER BUTTON */
+
+.custom-hamper__cta {
+  background:
+    linear-gradient(
+      135deg,
+      var(--accent),
+      var(--accent-strong)
+    );
+
+  color: #0b0b0d;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.30);
+}
+
+.custom-hamper__cta:hover,
+.custom-hamper__cta:focus-visible {
+  background:
+    linear-gradient(
+      135deg,
+      var(--accent-strong),
+      var(--accent)
+    );
+
+  box-shadow:
+    0 14px 30px rgba(168, 134, 88, 0.25);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(10, 10, 13, 0.96),
+      rgba(22, 22, 28, 0.96)
+    );
+
+  border-top: 1px solid var(--border);
+}
+
+.footer__brand {
+  color: var(--accent-strong);
+}
+
+.footer p,
+.footer a {
+  color: var(--muted);
+}
+
+.footer a:hover {
+  color: var(--accent-strong);
+}
+
+.footer__bottom {
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+}
+/* =========================================
+   PHASE 3 — RESPONSIVE + DARK THEME POLISH
+========================================= */
+
+
+/* =========================================
+   SMOOTHER DARK THEME TRANSITIONS
+========================================= */
+
+body,
+.navbar__inner,
+.product-card,
+.collection-hero__visual,
+.custom-hamper__inner,
+.footer,
+.btn,
+.button,
+.color-pill {
+  transition:
+    background 350ms ease,
+    color 250ms ease,
+    border-color 350ms ease,
+    box-shadow 350ms ease;
+}
+
+
+/* =========================================
+   DARK HERO GLOW
+========================================= */
+
+.collection-hero__visual {
+  isolation: isolate;
+}
+
+.collection-hero__visual::before {
+  filter: blur(4px);
+}
+
+.collection-hero__visual::after {
+  filter: blur(6px);
+}
+
+
+/* =========================================
+   PRODUCT CARD POLISH
+========================================= */
+
+.product-card {
+  will-change: transform;
+}
+
+.product-card:hover {
+  z-index: 2;
+}
+
+.product-card__media img {
+  transition: transform 600ms ease;
+}
+
+.product-card:hover .product-card__media img {
+  transform: scale(1.06);
+}
+
+
+/* =========================================
+   NAVBAR MOBILE DARK THEME
+========================================= */
+
+@media (max-width: 768px) {
+
+  .navbar__inner {
+    background: rgba(14, 14, 18, 0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  .navbar.is-scrolled .navbar__inner {
+    background: rgba(10, 10, 13, 0.97);
+  }
+
+  .navbar__brand {
+    color: var(--text);
+  }
+
+}
+
+
+/* =========================================
+   TABLET RESPONSIVENESS
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .collection-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .collection-hero__visual {
+    min-height: 280px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+========================================= */
+
+@media (max-width: 820px) {
+
+  .collection-hero {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .collection-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.9rem;
+  }
+
+  .collection-hero__visual {
+    min-height: 240px;
+  }
+
+  /* Make sure cards never stay invisible on mobile */
+  .reveal-card {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 560px) {
+
+  .collection-page {
+    padding-bottom: 2rem;
+  }
+
+  .collection-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .collection-catalog__head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .collection-hero {
+    padding: 1.5rem 0;
+  }
+
+  .collection-hero__visual {
+    min-height: 210px;
+    border-radius: 1.5rem;
+  }
+
+  .product-card {
+    border-radius: 1.25rem;
+  }
+
+  .product-card__media {
+    min-height: 200px;
+  }
+
+  .product-card__body {
+    padding: 1rem;
+  }
+
+  .custom-hamper {
+    margin: 1.6rem 0 2rem;
+  }
+
+  .custom-hamper__inner {
+    padding: 1.7rem 1rem;
+  }
+
+  .custom-hamper__shape--c {
+    display: none;
+  }
+
+  .custom-hamper__cta {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .footer {
+    margin-top: 1rem;
+  }
+
+}
+
+
+/* =========================================
+   VERY SMALL SCREENS
+========================================= */
+
+@media (max-width: 390px) {
+
+  .collection-hero__title {
+    font-size: 2rem;
+  }
+
+  .product-card__name {
+    font-size: 1rem;
+  }
+
+  .product-card__actions {
+    gap: 0.5rem;
+  }
+
+  .product-card__link,
+  .product-card__insta {
+    font-size: 0.85rem;
+  }
+
+  .color-pill {
+    min-width: 2rem;
+    height: 2rem;
+  }
+
+}
+
+
+/* =========================================
+   ACCESSIBILITY — KEYBOARD FOCUS
+========================================= */
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent-strong);
+  outline-offset: 4px;
+}
+
+
+/* =========================================
+   REDUCED MOTION SUPPORT
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal-card {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+}
+
+
+/* =========================================
+   FINAL DARK THEME SAFEGUARDS
+========================================= */
+
+.product-card,
+.collection-hero__visual,
+.custom-hamper__inner {
+  color: var(--text);
+}
+
+/* Prevent light backgrounds from appearing */
+main {
+  background: transparent;
+}
+
+/* Better dark theme text rendering */
+.collection-page,
+.page-shell {
+  color: var(--text);
+}
+/* =========================================
+   EXACT NAVBAR DROPDOWN DARK THEME FIX
+========================================= */
+
+/* Desktop Collection dropdown */
+.navbar__dropdown-panel {
+  background: rgba(18, 18, 22, 0.98) !important;
+
+  border-color: rgba(255, 255, 255, 0.12) !important;
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.50) !important;
+
+  color: var(--text) !important;
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+/* Dropdown collection links */
+.navbar__dropdown-panel a {
+  color: #e8e4de !important;
+}
+
+/* Hover and keyboard focus */
+.navbar__dropdown-panel a:hover,
+.navbar__dropdown-panel a:focus-visible {
+  background: rgba(168, 134, 88, 0.18) !important;
+  color: var(--accent-strong) !important;
+}
+
+
+/* =========================================
+   MOBILE MENU DARK THEME FIX
+========================================= */
+
+@media (max-width: 900px) {
+
+  .navbar__mobile-menu {
+    background: rgba(14, 14, 18, 0.98) !important;
+
+    box-shadow:
+      -16px 0 48px rgba(0, 0, 0, 0.50) !important;
+
+    color: var(--text);
+  }
+
+  .navbar__mobile-nav a,
+  .navbar__mobile-nav button {
+    color: var(--text) !important;
+  }
+
+  .navbar__mobile-submenu a {
+    color: #c5c0ba !important;
+  }
+
+  .navbar__mobile-nav a:hover,
+  .navbar__mobile-nav a:focus-visible,
+  .navbar__mobile-nav button:hover,
+  .navbar__mobile-nav button:focus-visible {
+    background: rgba(168, 134, 88, 0.16) !important;
+    color: var(--accent-strong) !important;
+  }
+
+  .navbar__mobile-backdrop {
+    background: rgba(0, 0, 0, 0.55) !important;
+  }
+}
